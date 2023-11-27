@@ -1,0 +1,20 @@
+Name,Age,Occupation
+Alice,28,Engineer
+Bob,35,Teacher
+Charlie,42,Doctor
+David,22,Student
+Emma,31,Artist
+Frank,40,Accountant
+Grace,25,Software Developer
+Henry,37,Writer
+Ivy,29,Marketing Specialist
+Jack,33,Chef
+Katie,26,Graphic Designer
+Leo,45,Entrepreneur
+Mia,30,Data Scientist
+Nick,38,Lawyer
+Olivia,27,Journalist
+Paul,32,Architect
+Quinn,34,Nurse
+Ryan,41,Physician
+Sara,23,Pharmacist
