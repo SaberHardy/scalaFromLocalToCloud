@@ -14,16 +14,12 @@ object RDDsObject {
     sparkContext.setLogLevel("ERROR")
 
     try {
-      val data = sparkContext.textFile("dataFiles/BigBasketProducts.csv")
-
-      // Filter Data
+      val data = sparkContext.textFile("file:///root/datasets/BigBasketProducts.csv")
       val filter_category = data.filter(line => line.contains("Beauty"))
-
       // Show the filtered data
-      //      filter_category.take(5).foreach(println)
-
+      filter_category.take(5).foreach(println)
       // Save the filtered data to a single file
-      filter_category.coalesce(2).saveAsTextFile("dataFiles/coalesce")
+      filter_category.saveAsTextFile("/user/cloudera/datasets/bigbasket_target")
     } finally {
       sparkContext.stop()
     }
