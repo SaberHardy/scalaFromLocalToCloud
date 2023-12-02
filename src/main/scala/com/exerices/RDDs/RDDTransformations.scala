@@ -31,9 +31,20 @@ object RDDTransformations {
     val entrepreneur_data = data.filter(x => x.contains("Entrepreneur"))
     entrepreneur_data.foreach(println)
 
+    println("=============Union data=============")
+    val union_data = english_data.union(entrepreneur_data)
+    union_data.foreach(println)
+
     println("======== Filter intersection records =============")
 
     val intersection_data = english_data.intersection(english_data)
     intersection_data.foreach(println)
+
+    println("======== Actions ==========")
+    val collections_data = union_data.collect()
+    collections_data.foreach(println)
+
+    println(s"Nbr of collections: ${union_data.count()}")
+
   }
 }
