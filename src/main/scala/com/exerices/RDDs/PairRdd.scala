@@ -31,5 +31,12 @@ object PairRdd {
     for (i <- reduceByKey) {
       println(i)
     }
+
+    println("******** Map Value ********")
+    val mapValuesElem = pairRdd.mapValues(a => a*2).collect()
+    for (i <- mapValuesElem) {
+      println(i)
+    }
+
   }
 }
