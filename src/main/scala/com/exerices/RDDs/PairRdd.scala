@@ -33,10 +33,17 @@ object PairRdd {
     }
 
     println("******** Map Value ********")
-    val mapValuesElem = pairRdd.mapValues(a => a*2).collect()
+    val mapValuesElem = pairRdd.mapValues(a => a * 2).collect()
     for (i <- mapValuesElem) {
       println(i)
     }
+    println("********* Actions *************")
+
+    pairRdd.countByKey().foreach(println)
+    pairRdd.collect().foreach(println)
+    pairRdd.first()
+    pairRdd.take(3)
+    pairRdd.reduce((x, y) => x + y)
 
   }
 }
