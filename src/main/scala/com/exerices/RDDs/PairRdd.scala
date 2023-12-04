@@ -43,7 +43,7 @@ object PairRdd {
     pairRdd.collect().foreach(println)
     pairRdd.first()
     pairRdd.take(3)
-    pairRdd.reduce((x, y) => x + y)
+//    pairRdd.reduce((x, y) => x + y)
 
   }
 }
