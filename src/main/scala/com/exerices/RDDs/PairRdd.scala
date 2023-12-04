@@ -18,5 +18,11 @@ object PairRdd {
       println(item._2)
     }
 
+    /*Group By*/
+
+    val salesGroupBy = pairRdd.groupByKey().collect()
+    for(i <- salesGroupBy) {
+      println(i)
+    }
   }
 }
