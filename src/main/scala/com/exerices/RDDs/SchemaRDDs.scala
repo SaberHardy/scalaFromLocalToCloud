@@ -3,10 +3,10 @@ package com.exerices.RDDs
 import org.apache.spark.{SparkConf, SparkContext}
 
 case class CountryDefinition(
-        countryName: String,
-        countryState: String,
-        countryLanguage: String,
-        countryCode: String)
+                              countryName: String,
+                              countryState: String,
+                              countryLanguage: String,
+                              countryCode: String)
 
 object SchemaRDDs {
   def main(args: Array[String]): Unit = {
@@ -20,5 +20,9 @@ object SchemaRDDs {
 
     split_input.foreach(println)
 
+    val filtered_english = split_input.filter(x => x.countryLanguage.contains("English"))
+    filtered_english.foreach(println)
+
+    filtered_english.coalesce(1).saveAsTextFile("dataFiles/FilteredData")
   }
 }
