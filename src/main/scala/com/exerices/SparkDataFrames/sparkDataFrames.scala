@@ -1,6 +1,7 @@
 package com.exerices.SparkDataFrames
 
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types._
+import org.apache.spark.sql.{Row, SparkSession, types}
 import org.apache.spark.{SparkConf, SparkContext}
 
 case class SchemaCountries(
@@ -53,7 +54,6 @@ object sparkDataFrames {
     |        Meghalaya|    Shillong|        English|        IND|
     |         Nagaland|      Kohima|        English|        IND|
     +-----------------+------------+---------------+-----------+
-
     * */
 
     /* Another method is creating a temp table and query using sql queries */
@@ -61,6 +61,33 @@ object sparkDataFrames {
     println("---------- Select using SQL condition ------------")
     english_dataframe.createOrReplaceTempView("CountrySqlTable")
     sparkSession.sql("select * from CountrySqlTable").show()
+
+    /* Using Row RDDs */
+
+    println("---------- Select using Struct ------------")
+
+    val rowRdd = split_filedata.map(x => Row(x(0), x(1), x(2), x(3)))
+    val struct_schema = StructType(
+      Array(
+        StructField("countryName", StringType, true),
+        StructField("countryState", StringType, true),
+        StructField("countryLanguage", StringType, true),
+        StructField("countryCode", StringType, true)
+      )
+    )
+    val struct_df = sparkSession.createDataFrame(rowRdd, struct_schema)
+    struct_df.persist()
+
+    struct_df.show(false)
+    struct_df.printSchema()
+
+    println("---------- Create a Temp view to query the data ------------")
+    // Use persist to cache the data in the memory
+
+    struct_df.createOrReplaceTempView("struct_country_table")
+
+    sparkSession.sql("select * from struct_country_table").show()
+
 
 
   }
