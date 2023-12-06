@@ -40,4 +40,22 @@ After uploading the .JAR file to the cloud, run this command:
 To check the data from JAR file:
 > hdfs dfs -ls /path/to/save/data/part-00000
 > hdfs dfs -cat /path/to/save/data/part-00000
+
+## <p align="center"> NOTES </p>
+
+
+> For creating RDDs use:
+>
+> <p align="center">SparkConf and SparkContext </p>
 > 
+> - val sparkConf = new SparkConf().setAppName("Log Data").setMaster("local[*]")
+> - val sparkContext = new SparkContext(sparkConf)
+
+> For create Spark DataFrames use:
+> 
+> SparkSession
+> 
+> - val sparkConf = new SparkConf().setAppName("DataFrames").setMaster("local[*]")
+> - val sparkContext = new SparkContext(sparkConf)
+> - val sparkSession = SparkSession.builder.getOrCreate()
+> - import sparkSession.implicits._
