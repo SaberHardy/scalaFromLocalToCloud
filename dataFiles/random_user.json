@@ -1,0 +1,337 @@
+{
+    "results": [
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "jared",
+                    "last": "douglas"
+                },
+                "location": {
+                    "street": "375 fairview st",
+                    "city": "mildura",
+                    "state": "western australia",
+                    "zip": 4896
+                },
+                "email": "jared.douglas@example.com",
+                "username": "redsnake680",
+                "password": "pizza1",
+                "salt": "5wBbArfb",
+                "md5": "51866076ac839ee462aefafdc4beb72c",
+                "sha1": "612fc3450e734ca8082f89d20c564b125e9458e6",
+                "sha256": "0b9a2e321d14716583a8bb3eedcfb2f002a43348f5e5c244c08750d6d426fcdf",
+                "registered": 926812053,
+                "dob": 138331249,
+                "phone": "04-0389-9208",
+                "cell": "0485-530-365",
+                "TFN": "730407801",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/22.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/22.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/22.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "ms",
+                    "first": "jessica",
+                    "last": "jackson"
+                },
+                "location": {
+                    "street": "8576 photinia ave",
+                    "city": "cairns",
+                    "state": "south australia",
+                    "zip": 2479
+                },
+                "email": "jessica.jackson@example.com",
+                "username": "organicfrog720",
+                "password": "jiang",
+                "salt": "6qMALoiz",
+                "md5": "a2662fb27cf51154250926cb526ac08c",
+                "sha1": "a33789b564e7be105f561d6ea97a42d8c3871e16",
+                "sha256": "b4d163ddc08695eff6b09ea691f6960981c86ef5ed61f655eed00e49ec9f1ade",
+                "registered": 1324965261,
+                "dob": 258543949,
+                "phone": "04-8537-6163",
+                "cell": "0451-825-247",
+                "TFN": "602320920",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/34.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/34.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/34.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "miss",
+                    "first": "kaylee",
+                    "last": "simmmons"
+                },
+                "location": {
+                    "street": "3763 wycliff ave",
+                    "city": "sydney",
+                    "state": "queensland",
+                    "zip": 2350
+                },
+                "email": "kaylee.simmmons@example.com",
+                "username": "purpleleopard678",
+                "password": "1979",
+                "salt": "tfnepHcW",
+                "md5": "91cf9780f005214e400956bdaca50e78",
+                "sha1": "6bbe902304c8b5570fc4e2340ee703d636236b4a",
+                "sha256": "a19cd9d3856842e6223f8232857e129a2c45911c86732dbb287e1f7e9c2d3183",
+                "registered": 1141072584,
+                "dob": 1176347530,
+                "phone": "05-8118-3795",
+                "cell": "0444-736-719",
+                "TFN": "908735262",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/1.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/1.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "miss",
+                    "first": "hazel",
+                    "last": "watson"
+                },
+                "location": {
+                    "street": "7357 mockingbird hill",
+                    "city": "traralgon",
+                    "state": "western australia",
+                    "zip": 4511
+                },
+                "email": "hazel.watson@example.com",
+                "username": "orangeleopard585",
+                "password": "dreaming",
+                "salt": "wOqIoAFp",
+                "md5": "7c664d506c8e1d3ea16b97fe3d9acde3",
+                "sha1": "0c0344698852758d15ba6dfbae0250902acfa987",
+                "sha256": "ef4941fcc1bd2a6c7fd2dc90fbba63c69e8945b44a8133b8231e9d1f02ae4b53",
+                "registered": 1008278573,
+                "dob": 287312283,
+                "phone": "06-6079-1510",
+                "cell": "0487-992-794",
+                "TFN": "453167864",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/41.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/41.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/41.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "andre",
+                    "last": "barnes"
+                },
+                "location": {
+                    "street": "5671 depaul dr",
+                    "city": "townsville",
+                    "state": "northern territory",
+                    "zip": 6828
+                },
+                "email": "andre.barnes@example.com",
+                "username": "goldenswan692",
+                "password": "amanda1",
+                "salt": "NyEAoWJI",
+                "md5": "a7428503555504743c640053306bb2b5",
+                "sha1": "0a30a38ce6b0aa0bc8d0dec01ef031cefc50d0ab",
+                "sha256": "d57173d5000e5c72990968e2cd4f4be064a5033242a78b6ec228f0582975130c",
+                "registered": 1353256681,
+                "dob": 1417631163,
+                "phone": "05-2997-4038",
+                "cell": "0459-458-719",
+                "TFN": "699492313",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/14.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/14.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/14.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "norman",
+                    "last": "marshall"
+                },
+                "location": {
+                    "street": "6714 pecan acres ln",
+                    "city": "mildura",
+                    "state": "tasmania",
+                    "zip": 7712
+                },
+                "email": "norman.marshall@example.com",
+                "username": "lazyswan139",
+                "password": "system",
+                "salt": "bMyionhW",
+                "md5": "c7254526522c1608e3153af57d5ed5ff",
+                "sha1": "516b37e1a8adf1729acaa54175de73dea744db8b",
+                "sha256": "2bcd09c4b1a0bd7149abfd4f9805300a0c5ed8de0969e174371114c1d9af65f1",
+                "registered": 1039336192,
+                "dob": 1342562070,
+                "phone": "03-8230-5863",
+                "cell": "0404-306-861",
+                "TFN": "234270920",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/43.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/43.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/43.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "mrs",
+                    "first": "vickie",
+                    "last": "horton"
+                },
+                "location": {
+                    "street": "8604 hunters creek dr",
+                    "city": "orange",
+                    "state": "northern territory",
+                    "zip": 9227
+                },
+                "email": "vickie.horton@example.com",
+                "username": "purplekoala585",
+                "password": "boston1",
+                "salt": "oF7p1nEF",
+                "md5": "250c8fd9065062d8ab00ca0dad1989f5",
+                "sha1": "478430e889214a49a4b3714300f8ddd7c16ad114",
+                "sha256": "cdd0eec0ba5d90ecfdf0d1726dfcf091a8878d9e4397606f03d73fb0272b1f1c",
+                "registered": 1092413771,
+                "dob": 374031947,
+                "phone": "06-3860-4784",
+                "cell": "0402-587-954",
+                "TFN": "601195667",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/44.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/44.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/44.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "tyler",
+                    "last": "price"
+                },
+                "location": {
+                    "street": "8198 sunset st",
+                    "city": "sydney",
+                    "state": "victoria",
+                    "zip": 7935
+                },
+                "email": "tyler.price@example.com",
+                "username": "yellowfish987",
+                "password": "lancer",
+                "salt": "qxtt1uFu",
+                "md5": "61e0361d0a47f257a9f17bc9b612107c",
+                "sha1": "4fa16e2f57725a8e46b22b03b53f37edc662033f",
+                "sha256": "b6f4c24b0413e708fb0174739b7caddaaab2bf2621cccef9cc441450f6525b5d",
+                "registered": 1072232402,
+                "dob": 86562488,
+                "phone": "04-3569-9901",
+                "cell": "0430-143-014",
+                "TFN": "327087825",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/95.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/95.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/95.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "male",
+                "name": {
+                    "title": "mr",
+                    "first": "jerome",
+                    "last": "cooper"
+                },
+                "location": {
+                    "street": "6980 northaven rd",
+                    "city": "nowra",
+                    "state": "western australia",
+                    "zip": 6607
+                },
+                "email": "jerome.cooper@example.com",
+                "username": "orangefrog109",
+                "password": "footjob",
+                "salt": "qeJauqAC",
+                "md5": "5750f6057592e71feccca3f5b6e92a12",
+                "sha1": "449d34d8cbe4e043a2a23a12eadb2516843b128a",
+                "sha256": "64a37ee31027590dc7f9f39193b9f530422099028643f2044496b41e6b61df97",
+                "registered": 935848474,
+                "dob": 1055170952,
+                "phone": "02-8328-1294",
+                "cell": "0403-977-979",
+                "TFN": "013586602",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/men/17.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/men/17.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/17.jpg"
+                }
+            }
+        },
+        {
+            "user": {
+                "gender": "female",
+                "name": {
+                    "title": "mrs",
+                    "first": "cherly",
+                    "last": "davis"
+                },
+                "location": {
+                    "street": "2001 fincher rd",
+                    "city": "tamworth",
+                    "state": "australian capital territory",
+                    "zip": 8756
+                },
+                "email": "cherly.davis@example.com",
+                "username": "blackbutterfly427",
+                "password": "191919",
+                "salt": "sqUylwsu",
+                "md5": "7bb7f60c75be9fd31230389e882c2b86",
+                "sha1": "fc378a644182d22f781dbbabaa15383c15390f8e",
+                "sha256": "dae4040fab686639b9eeec12b99c7f98bfbd77a9b8347332d70877400cec6f10",
+                "registered": 1307416256,
+                "dob": 505982594,
+                "phone": "06-9568-2575",
+                "cell": "0444-160-871",
+                "TFN": "105666048",
+                "picture": {
+                    "large": "https://randomuser.me/api/portraits/women/3.jpg",
+                    "medium": "https://randomuser.me/api/portraits/med/women/3.jpg",
+                    "thumbnail": "https://randomuser.me/api/portraits/thumb/women/3.jpg"
+                }
+            }
+        }
+    ],
+    "nationality": "AU",
+    "seed": "912f036038680e4a00",
+    "version": "0.8"
+}

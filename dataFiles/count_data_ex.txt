@@ -1,7 +1,0 @@
-
-In Scala, Resilient Distributed Datasets (RDD) are a fundamental data structure in Apache Spark,
-a distributed computing framework. RDDs represent a distributed collection of objects and
-can be processed in parallel.
-There are various transformations and actions that can be applied to RDDs
-in Scala to perform distributed data processing.
-Here are some common transformations and actions:
