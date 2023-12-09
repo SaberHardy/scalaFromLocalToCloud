@@ -26,3 +26,18 @@ of structured data in a regular Scala program, while StructType
 is used for defining the structure of data within the context of
 Spark SQL and DataFrames. Depending on your use case, you might 
 use one or both in a Spark application.
+
+## NOTE:
+> For creating spark sparkContext you need spark config
+> if you see an error that's mean you have double session created in the program
+> 1. Create sparkConf
+> 2. Create sparkContext
+> 3. sparkContext.setLogLevel("Error")
+> 4. val sparkSession = SparkSession.builder().config(sparkConf).getOrCreate()
+> 5. val read_csv_file = sparkSession.read.format("csv")
+      .option("header", "true")
+      .option("inferSchema", "true")
+      .load("dataFiles/train.csv")
+
+*  This will allow you to print all the results after the logs
+> 6. Start the processing staff after this
