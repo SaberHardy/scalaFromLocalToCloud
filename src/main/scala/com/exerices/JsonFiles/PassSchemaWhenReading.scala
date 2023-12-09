@@ -14,10 +14,10 @@ object PassSchemaWhenReading {
     spark.sparkContext.setLogLevel("ERROR")
 
     val dml = StructType(Array(
-      StructField("state", StringType, true),
-      StructField("capital", StringType, true),
-      StructField("language", StringType, true),
-      StructField("country_id", StringType, true)
+      StructField("state", StringType),
+      StructField("capital", StringType),
+      StructField("language", StringType),
+      StructField("country_id", StringType)
     ))
 
     val read_file = spark.read.format("csv")
@@ -25,8 +25,12 @@ object PassSchemaWhenReading {
       .schema(dml)
       .load("dataFiles/countries*")
 
-    read_file.show(100)
+
     read_file.coalesce(1)
+      .write.mode("overwrite")
+      .format("csv")
+      .partitionBy("country_id")
+      .save("dataFiles/partitioned_data")
   }
 
 }
