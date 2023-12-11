@@ -22,5 +22,8 @@ object HandelNullValues {
     file_content.show()
 
     file_content.na.drop(Seq("bank_id", "account")).show()
+
+    file_content.na.fill("N/A").show()
+
   }
 }
