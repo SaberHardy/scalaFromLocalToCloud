@@ -1,0 +1,11 @@
+account,bank_id,gender,country
+A1234,B001,M,USA
+B5678,B002,F,Canada
+C9101,B003,,UK
+D2345,,F,Germany
+E6789,B002,M,France
+F1234,B003,,
+G5678,,M,Spain
+H9101,B004,F,Australia
+I2345,B005,M,Japan
+,,,
