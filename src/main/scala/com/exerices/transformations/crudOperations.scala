@@ -1,4 +1,5 @@
 package com.exerices.transformations
+
 import org.apache.spark.sql.functions._
 
 import org.apache.spark.sql.SparkSession
@@ -49,19 +50,44 @@ object crudOperations {
      */
 
     // Select using selectExpr
-    val columns_with_expr = read_file.withColumn(
-      "TransactionDate",
-      date_format(from_unixtime(unix_timestamp(col("TransactionDate"), "MM/dd/yy")), "MM/dd/yyyy")
-    ).select(
-      "TransactionID",
-      "CustomerID",
-      "CustGender",
-      "CustAccountBalance",
-      "TransactionDate",
-      "TransactionAmount"
-    )
+    var columns_with_expr = selected_columns.withColumn(
+        "TransactionDate",
+        date_format(from_unixtime(unix_timestamp(
+          col("TransactionDate"), "MM/dd/yy")),
+          "MM/dd/yyyy"))
+      .select(
+        "TransactionID",
+        "CustomerID",
+        "CustGender",
+        "CustAccountBalance",
+        "TransactionDate",
+        "TransactionAmount"
+      )
 
-    columns_with_expr.show(3)
+//    val male = columns_with_expr.select("CustGender").distinct()
+//
+//    male.show()
+    //+----------+
+    //|CustGender|
+    //+----------+
+    //|         F|
+    //|      null|
+    //|         M|
+    //|         T|
+    //+----------+
+
+    columns_with_expr =  columns_with_expr.withColumn(
+      "CustGender",
+      when(col("CustGender") === "T", "M").otherwise(col("CustGender"))
+    )
+    columns_with_expr = columns_with_expr.withColumn(
+      "CustGender",
+      when(col("CustGender") === "null", "F").otherwise(col("CustGender"))
+    ).na.fill("F", Seq("CustGender"))
+
+    val male2 = columns_with_expr.select("CustGender").distinct()
+
+    male2.show()
 
   }
 
