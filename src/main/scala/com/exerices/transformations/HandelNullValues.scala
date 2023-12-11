@@ -21,6 +21,6 @@ object HandelNullValues {
 
     file_content.show()
 
-    file_content.na.drop(Seq("bank_id")).show()
+    file_content.na.drop(Seq("bank_id", "account")).show()
   }
 }
