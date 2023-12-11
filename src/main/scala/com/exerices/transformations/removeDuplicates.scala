@@ -24,6 +24,13 @@ object removeDuplicates {
 
     println(s"All the data are: $removed_duplicates")
 
+    // Drop Duplication in columns
+    println("_________Drop Duplication from rows_______")
+
+    val dropped_duplication = file_content.distinct().dropDuplicates("CustomerID")
+    println(dropped_duplication.count())
+
+
   }
 
 }
