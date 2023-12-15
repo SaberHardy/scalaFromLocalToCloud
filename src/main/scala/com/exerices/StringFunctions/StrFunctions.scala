@@ -2,7 +2,7 @@ package com.exerices.StringFunctions
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{col, concat_ws, instr}
+import org.apache.spark.sql.functions.{col, concat_ws, current_date, date_format, instr}
 
 object StrFunctions {
   def main(args: Array[String]): Unit = {
@@ -29,5 +29,15 @@ object StrFunctions {
 
     println("_________ This with new cols ___________")
     file_content.show()
+
+    file_content.select("CustomerDOB")
+      .withColumn("CurrentData", current_date).show()
+
+    file_content.select("CustomerDOB")
+      .withColumn("Current Date", current_date)
+      .withColumn("date format",
+        date_format(col("Current Date"),
+          "MM-dd-yyyy")).show()
+//    file_content.show()
   }
 }
