@@ -44,6 +44,7 @@ object BankUseCase {
       row_number().over(highestAccountBalance))
       .select("CustomerID", "CustAccountBalance",
         "TransactionAmount (INR)", "RowNumber")
+      .filter(col("RowNumber")===1)
 
     customerData.show()
   }
