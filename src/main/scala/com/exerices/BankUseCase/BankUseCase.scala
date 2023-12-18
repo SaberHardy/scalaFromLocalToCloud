@@ -3,7 +3,7 @@ package com.exerices.BankUseCase
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql._
 import org.apache.spark.sql.expressions.Window
-import org.apache.spark.sql.functions.{col, row_number, window}
+import org.apache.spark.sql.functions.{col, count, row_number, window}
 
 object BankUseCase {
 
@@ -47,5 +47,16 @@ object BankUseCase {
       .filter(col("RowNumber")===1)
 
     customerData.show()
+
+    println("-- Max number of transactions per location --")
+
+    val max_nbr_transaction_loc = bankDF.select(
+      "CustLocation",
+    "TransactionID")
+    max_nbr_transaction_loc.groupBy("CustLocation")
+      .agg(count(col("TransactionID")).as("TotalTransactions"))
+
+    max_nbr_transaction_loc.show()
+
   }
 }
