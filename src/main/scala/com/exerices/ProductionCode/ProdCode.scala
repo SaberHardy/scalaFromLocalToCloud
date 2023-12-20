@@ -11,7 +11,19 @@ object ProdCode {
 
     val sparkContext = new SparkContext(sparkConf)
     val spark = SparkSession.builder().getOrCreate()
-
     sparkContext.setLogLevel("Error")
+
+    val employee_data = spark.read.format("csv")
+      .option("header", true)
+      .load("dataFiles/joins/employees.csv")
+
+    employee_data.show(false)
+
+    employee_data.write.format("parquet").option("header", "true")
+      .mode("overwrite")
+      .save("dataFiles/joins/parquetData")
+
+    println("the parquet data has been saved!!")
+
   }
 }
