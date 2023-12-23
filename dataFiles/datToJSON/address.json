@@ -1,0 +1,8 @@
+{
+	"orgname": "ABC Inclusive",
+	"Employee": "John",
+	"address":{
+		"permanent_address":"India",
+		"temporary_address":"America"
+	}
+}
