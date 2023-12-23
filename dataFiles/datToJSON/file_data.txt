@@ -1,0 +1,6 @@
+"Paul"~"33"~{"city":"Hyderabad","state":"Telangana","country":"India"}
+"Robin"~"27"~{"city":"chennai","state":"Tamil Nadu","country":"India"}
+"William"~"44"~{"city":"Mumbai","state":"Maharashtra","country":"India"}
+"Pooja"~"36"~{"city":"Trivandrum","state":"Kearla","country":"India"}
+"Rahul"~"21"~{"city":"Hyderabad","state":"Telangana","country":"India"}
+"Jessica"~"20"~{"city":"Ahmadabad","state":"Gujarat","country":"India"}
