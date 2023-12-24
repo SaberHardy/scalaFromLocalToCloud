@@ -17,33 +17,33 @@ object NestedUsingStruct {
     spark.sparkContext.setLogLevel("ERROR")
     import spark.implicits._
 
-    val json_data = spark.read.format("json")
+    val df1 = spark.read.format("json")
       .option("multiline", true)
       .load("dataFiles/datToJSON/cake.json")
-    json_data.persist()
-    json_data.printSchema()
-    json_data.show()
+
+    df1.persist()
+    df1.printSchema()
+    df1.show(false)
 
     // Flatten  the data using explode function
 
-    val flatten_df = json_data.withColumn(
+    val flatten_array_df = df1.withColumn(
       "topping",
       explode(col("topping")))
 
     println("Flatten Data by creating new  column")
-    flatten_df.printSchema()
-    flatten_df.show()
+    flatten_array_df.printSchema()
+    flatten_array_df.show(false)
 
     println("Flatten Data rename id of topping after structure the data")
 
-    val new_id_data = flatten_df.withColumn(
-      "topping_id", col("topping.id"))
+    val struct_df = flatten_array_df
+      .withColumn("topping_id", col("topping.id"))
       .withColumn("topping_type", col("topping.type"))
-      .drop("topping")
+      .drop(col("topping"))
 
-    json_data.printSchema()
-    new_id_data.show()
-
+    struct_df.printSchema()
+    struct_df.show(false)
 
   }
 }
