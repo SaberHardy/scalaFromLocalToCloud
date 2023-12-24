@@ -45,5 +45,29 @@ object NestedUsingStruct {
     struct_df.printSchema()
     struct_df.show(false)
 
+
+    val selected_data = struct_df.select(
+      col("batters.*"),
+      col("id"),
+      col("name"),
+      col("ppu"),
+      col("type"),
+      col("topping_id"),
+      col("topping_type")
+    )
+
+    selected_data.printSchema()
+    selected_data.show(false)
+
+    val batter_data = selected_data
+      .withColumn("batter", explode(col("batter")))
+      .withColumn("element_id", col("batter.id"))
+      .withColumn("element_type", col("batter.type"))
+      .drop("batter")
+
+    println("Flatten Data with Batter column")
+
+    batter_data.printSchema()
+    batter_data.show(false)
   }
 }
