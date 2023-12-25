@@ -46,5 +46,18 @@ object FlattenXMLData {
       explode(col("color_swatch"))
     )
     flatt_color.printSchema()
+
+   val selected_data_columns = flatt_color.select(
+     col("item_number"),
+     col("_gender"),
+     col("price"),
+     col("_description"),
+     col("color_swatch._VALUE"),
+     col("color_swatch._image"),
+   )
+
+    selected_data_columns.printSchema()
+    selected_data_columns.show(false)
+
   }
 }
