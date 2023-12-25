@@ -11,3 +11,4 @@ libraryDependencies += "org.scalafx" %% "scalafx" % "16.0.0-R25"
 libraryDependencies += "org.apache.spark" %% "spark-core" % "3.3.2"
 libraryDependencies ++= Seq("org.apache.spark" %% "spark-sql" % "3.3.2")
 libraryDependencies += "org.apache.spark" %% "spark-avro" % "3.5.0"
+libraryDependencies += "com.databricks" %% "spark-xml" % "0.16.0"
