@@ -2,6 +2,7 @@ package com.exerices.workWithXML
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions.{col, explode}
 
 object FlattenXMLData {
   def main(args: Array[String]): Unit = {
@@ -23,5 +24,11 @@ object FlattenXMLData {
 
     xml_data.printSchema()
     xml_data.show()
+
+    val size_array  =xml_data.withColumn(
+      "Size", explode(col("size")))
+
+    size_array.printSchema()
+    size_array.show()
   }
 }
