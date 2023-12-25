@@ -2,7 +2,7 @@ package com.exerices.WorkWithJSON
 
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{col, struct}
+import org.apache.spark.sql.functions.{col, collect_list, struct}
 
 object GenerateComplexData {
   def main(args: Array[String]): Unit = {
@@ -57,6 +57,16 @@ object GenerateComplexData {
      |    |-- permanent_address: string (nullable = true)
      |    |-- temporary_address: string (nullable = true)
     * */
+
+
+    // Group by and collect columns
+
+    val collected_data = structuredData
+      .groupBy("Employee", "orgname")
+      .agg(collect_list("Address"))
+
+    collected_data.show()
+    collected_data.printSchema()
 
   }
 }
