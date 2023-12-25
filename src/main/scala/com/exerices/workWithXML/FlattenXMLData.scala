@@ -25,10 +25,26 @@ object FlattenXMLData {
     xml_data.printSchema()
     xml_data.show()
 
-    val size_array  =xml_data.withColumn(
-      "Size", explode(col("size")))
+    val size_array = xml_data.withColumn(
+      "size", explode(col("size")))
 
     size_array.printSchema()
     size_array.show()
+
+    println("---- Flatten all the columns ----")
+    val selected_columns = size_array.select(
+      col("_gender"),
+      col("item_number"),
+      col("price"),
+      col("size.*")
+    )
+    selected_columns.printSchema()
+    selected_columns.show()
+
+    val flatt_color = selected_columns.withColumn(
+      "color_swatch",
+      explode(col("color_swatch"))
+    )
+    flatt_color.printSchema()
   }
 }
